@@ -78,7 +78,7 @@ func NewPcloudPvminstancesActionPostOK() *PcloudPvminstancesActionPostOK {
 /*
 PcloudPvminstancesActionPostOK describes a response with status code 200, with default header values.
 
-OK
+OKi
 */
 type PcloudPvminstancesActionPostOK struct {
 	Payload models.Object
