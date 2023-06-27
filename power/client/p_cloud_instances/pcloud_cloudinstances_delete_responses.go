@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // PcloudCloudinstancesDeleteReader is a Reader for the PcloudCloudinstancesDelete structure.
@@ -54,7 +54,7 @@ func (o *PcloudCloudinstancesDeleteReader) ReadResponse(response runtime.ClientR
 		}
 		return nil, result
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[DELETE /pcloud/v1/cloud-instances/{cloud_instance_id}] pcloud.cloudinstances.delete", response, response.Code())
 	}
 }
 

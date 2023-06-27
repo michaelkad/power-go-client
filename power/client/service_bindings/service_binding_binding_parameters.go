@@ -16,7 +16,7 @@ import (
 	"github.com/go-openapi/strfmt"
 	"github.com/go-openapi/swag"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // NewServiceBindingBindingParams creates a new ServiceBindingBindingParams object,

@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // ServiceBrokerAuthTokenPostReader is a Reader for the ServiceBrokerAuthTokenPost structure.
@@ -54,7 +54,7 @@ func (o *ServiceBrokerAuthTokenPostReader) ReadResponse(response runtime.ClientR
 		}
 		return nil, result
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[POST /auth/v1/token] serviceBroker.auth.token.post", response, response.Code())
 	}
 }
 

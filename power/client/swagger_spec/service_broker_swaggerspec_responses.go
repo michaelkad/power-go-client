@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // ServiceBrokerSwaggerspecReader is a Reader for the ServiceBrokerSwaggerspec structure.
@@ -30,7 +30,7 @@ func (o *ServiceBrokerSwaggerspecReader) ReadResponse(response runtime.ClientRes
 		}
 		return result, nil
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[GET /v1/swagger.json] serviceBroker.swaggerspec", response, response.Code())
 	}
 }
 

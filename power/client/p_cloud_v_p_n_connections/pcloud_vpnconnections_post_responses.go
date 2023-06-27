@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // PcloudVpnconnectionsPostReader is a Reader for the PcloudVpnconnectionsPost structure.
@@ -66,7 +66,7 @@ func (o *PcloudVpnconnectionsPostReader) ReadResponse(response runtime.ClientRes
 		}
 		return nil, result
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[POST /pcloud/v1/cloud-instances/{cloud_instance_id}/vpn/vpn-connections] pcloud.vpnconnections.post", response, response.Code())
 	}
 }
 

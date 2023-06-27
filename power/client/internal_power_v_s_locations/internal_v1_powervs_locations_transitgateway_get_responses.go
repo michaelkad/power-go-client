@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // InternalV1PowervsLocationsTransitgatewayGetReader is a Reader for the InternalV1PowervsLocationsTransitgatewayGet structure.
@@ -42,7 +42,7 @@ func (o *InternalV1PowervsLocationsTransitgatewayGetReader) ReadResponse(respons
 		}
 		return nil, result
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[GET /internal/v1/powervs/locations/transit-gateway] internal.v1.powervs.locations.transitgateway.get", response, response.Code())
 	}
 }
 

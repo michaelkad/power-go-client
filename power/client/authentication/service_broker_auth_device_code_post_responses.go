@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // ServiceBrokerAuthDeviceCodePostReader is a Reader for the ServiceBrokerAuthDeviceCodePost structure.
@@ -42,7 +42,7 @@ func (o *ServiceBrokerAuthDeviceCodePostReader) ReadResponse(response runtime.Cl
 		}
 		return nil, result
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[POST /auth/v1/device/code] serviceBroker.auth.device.code.post", response, response.Code())
 	}
 }
 

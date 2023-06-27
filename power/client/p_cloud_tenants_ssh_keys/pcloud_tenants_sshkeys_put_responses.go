@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // PcloudTenantsSshkeysPutReader is a Reader for the PcloudTenantsSshkeysPut structure.
@@ -54,7 +54,7 @@ func (o *PcloudTenantsSshkeysPutReader) ReadResponse(response runtime.ClientResp
 		}
 		return nil, result
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[PUT /pcloud/v1/tenants/{tenant_id}/sshkeys/{sshkey_name}] pcloud.tenants.sshkeys.put", response, response.Code())
 	}
 }
 

@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // PcloudSppplacementgroupsGetallReader is a Reader for the PcloudSppplacementgroupsGetall structure.
@@ -60,7 +60,7 @@ func (o *PcloudSppplacementgroupsGetallReader) ReadResponse(response runtime.Cli
 		}
 		return nil, result
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[GET /pcloud/v1/cloud-instances/{cloud_instance_id}/spp-placement-groups] pcloud.sppplacementgroups.getall", response, response.Code())
 	}
 }
 

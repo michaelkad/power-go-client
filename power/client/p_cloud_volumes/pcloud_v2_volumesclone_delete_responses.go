@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // PcloudV2VolumescloneDeleteReader is a Reader for the PcloudV2VolumescloneDelete structure.
@@ -60,7 +60,7 @@ func (o *PcloudV2VolumescloneDeleteReader) ReadResponse(response runtime.ClientR
 		}
 		return nil, result
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[DELETE /pcloud/v2/cloud-instances/{cloud_instance_id}/volumes-clone/{volumes_clone_id}] pcloud.v2.volumesclone.delete", response, response.Code())
 	}
 }
 

@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // ServiceBrokerAuthCallbackReader is a Reader for the ServiceBrokerAuthCallback structure.
@@ -42,7 +42,7 @@ func (o *ServiceBrokerAuthCallbackReader) ReadResponse(response runtime.ClientRe
 		}
 		return nil, result
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[GET /auth/v1/callback] serviceBroker.auth.callback", response, response.Code())
 	}
 }
 

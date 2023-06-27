@@ -12,7 +12,7 @@ import (
 	"github.com/go-openapi/runtime"
 	"github.com/go-openapi/strfmt"
 
-	"github.com/IBM-Cloud/power-go-client/power/models"
+	"github.ibm.com/power-iaas/service-broker/power/models"
 )
 
 // BluemixServiceInstanceGetReader is a Reader for the BluemixServiceInstanceGet structure.
@@ -36,7 +36,7 @@ func (o *BluemixServiceInstanceGetReader) ReadResponse(response runtime.ClientRe
 		}
 		return nil, result
 	default:
-		return nil, runtime.NewAPIError("response status code does not match any response statuses defined for this endpoint in the swagger spec", response, response.Code())
+		return nil, runtime.NewAPIError("[GET /bluemix_v1/service_instances/{instance_id}] bluemix.serviceInstance.get", response, response.Code())
 	}
 }
 
