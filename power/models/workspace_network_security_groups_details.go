@@ -22,7 +22,7 @@ type WorkspaceNetworkSecurityGroupsDetails struct {
 
 	// The state of a Network Security Groups configuration
 	// Required: true
-	// Enum: ["active","error","configuring","removing","inactive"]
+	// Enum: [active error configuring removing inactive]
 	State *string `json:"state"`
 }
 

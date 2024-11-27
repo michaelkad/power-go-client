@@ -21,7 +21,7 @@ import (
 type NetworkSecurityGroupRuleProtocolTCPFlag struct {
 
 	// TCP flag
-	// Enum: ["syn","ack","fin","rst","urg","psh","wnd","chk","seq"]
+	// Enum: [syn ack fin rst urg psh wnd chk seq]
 	Flag string `json:"flag,omitempty"`
 }
 

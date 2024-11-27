@@ -14,7 +14,6 @@ import (
 	"github.com/go-openapi/runtime"
 	cr "github.com/go-openapi/runtime/client"
 	"github.com/go-openapi/strfmt"
-	"github.com/go-openapi/swag"
 )
 
 // NewV1HostsGetParams creates a new V1HostsGetParams object,
@@ -61,10 +60,6 @@ V1HostsGetParams contains all the parameters to send to the API endpoint
 	Typically these are written to a http.Request.
 */
 type V1HostsGetParams struct {
-
-	// HostReference.
-	HostReference *bool
-
 	timeout    time.Duration
 	Context    context.Context
 	HTTPClient *http.Client
@@ -118,17 +113,6 @@ func (o *V1HostsGetParams) SetHTTPClient(client *http.Client) {
 	o.HTTPClient = client
 }
 
-// WithHostReference adds the hostReference to the v1 hosts get params
-func (o *V1HostsGetParams) WithHostReference(hostReference *bool) *V1HostsGetParams {
-	o.SetHostReference(hostReference)
-	return o
-}
-
-// SetHostReference adds the hostReference to the v1 hosts get params
-func (o *V1HostsGetParams) SetHostReference(hostReference *bool) {
-	o.HostReference = hostReference
-}
-
 // WriteToRequest writes these params to a swagger request
 func (o *V1HostsGetParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Registry) error {
 
@@ -136,23 +120,6 @@ func (o *V1HostsGetParams) WriteToRequest(r runtime.ClientRequest, reg strfmt.Re
 		return err
 	}
 	var res []error
-
-	if o.HostReference != nil {
-
-		// query param host_reference
-		var qrHostReference bool
-
-		if o.HostReference != nil {
-			qrHostReference = *o.HostReference
-		}
-		qHostReference := swag.FormatBool(qrHostReference)
-		if qHostReference != "" {
-
-			if err := r.SetQueryParam("host_reference", qHostReference); err != nil {
-				return err
-			}
-		}
-	}
 
 	if len(res) > 0 {
 		return errors.CompositeValidationError(res...)

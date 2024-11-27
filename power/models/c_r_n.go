@@ -11,7 +11,7 @@ import (
 	"github.com/go-openapi/strfmt"
 )
 
-// CRN The CRN for this resource
+// CRN The CRN for this resource. Hello, testing swagger update script for 1Pipeline12345
 //
 // swagger:model CRN
 type CRN string
