@@ -6,6 +6,7 @@ package v_p_mem_volumes
 // Editing this file might prove futile when you re-run the swagger generate command
 
 import (
+	"encoding/json"
 	"fmt"
 	"io"
 
@@ -103,11 +104,13 @@ func (o *V1VpmemVolumesGetallOK) Code() int {
 }
 
 func (o *V1VpmemVolumesGetallOK) Error() string {
-	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallOK  %+v", 200, o.Payload)
+	payload, _ := json.Marshal(o.Payload)
+	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallOK %s", 200, payload)
 }
 
 func (o *V1VpmemVolumesGetallOK) String() string {
-	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallOK  %+v", 200, o.Payload)
+	payload, _ := json.Marshal(o.Payload)
+	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallOK %s", 200, payload)
 }
 
 func (o *V1VpmemVolumesGetallOK) GetPayload() *models.VPMemVolumes {
@@ -171,11 +174,13 @@ func (o *V1VpmemVolumesGetallUnauthorized) Code() int {
 }
 
 func (o *V1VpmemVolumesGetallUnauthorized) Error() string {
-	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallUnauthorized  %+v", 401, o.Payload)
+	payload, _ := json.Marshal(o.Payload)
+	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallUnauthorized %s", 401, payload)
 }
 
 func (o *V1VpmemVolumesGetallUnauthorized) String() string {
-	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallUnauthorized  %+v", 401, o.Payload)
+	payload, _ := json.Marshal(o.Payload)
+	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallUnauthorized %s", 401, payload)
 }
 
 func (o *V1VpmemVolumesGetallUnauthorized) GetPayload() *models.Error {
@@ -239,11 +244,13 @@ func (o *V1VpmemVolumesGetallForbidden) Code() int {
 }
 
 func (o *V1VpmemVolumesGetallForbidden) Error() string {
-	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallForbidden  %+v", 403, o.Payload)
+	payload, _ := json.Marshal(o.Payload)
+	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallForbidden %s", 403, payload)
 }
 
 func (o *V1VpmemVolumesGetallForbidden) String() string {
-	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallForbidden  %+v", 403, o.Payload)
+	payload, _ := json.Marshal(o.Payload)
+	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallForbidden %s", 403, payload)
 }
 
 func (o *V1VpmemVolumesGetallForbidden) GetPayload() *models.Error {
@@ -307,11 +314,13 @@ func (o *V1VpmemVolumesGetallNotFound) Code() int {
 }
 
 func (o *V1VpmemVolumesGetallNotFound) Error() string {
-	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallNotFound  %+v", 404, o.Payload)
+	payload, _ := json.Marshal(o.Payload)
+	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallNotFound %s", 404, payload)
 }
 
 func (o *V1VpmemVolumesGetallNotFound) String() string {
-	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallNotFound  %+v", 404, o.Payload)
+	payload, _ := json.Marshal(o.Payload)
+	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallNotFound %s", 404, payload)
 }
 
 func (o *V1VpmemVolumesGetallNotFound) GetPayload() *models.Error {
@@ -375,11 +384,13 @@ func (o *V1VpmemVolumesGetallInternalServerError) Code() int {
 }
 
 func (o *V1VpmemVolumesGetallInternalServerError) Error() string {
-	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallInternalServerError  %+v", 500, o.Payload)
+	payload, _ := json.Marshal(o.Payload)
+	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallInternalServerError %s", 500, payload)
 }
 
 func (o *V1VpmemVolumesGetallInternalServerError) String() string {
-	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallInternalServerError  %+v", 500, o.Payload)
+	payload, _ := json.Marshal(o.Payload)
+	return fmt.Sprintf("[GET /v1/vpmem-volumes][%d] v1VpmemVolumesGetallInternalServerError %s", 500, payload)
 }
 
 func (o *V1VpmemVolumesGetallInternalServerError) GetPayload() *models.Error {
